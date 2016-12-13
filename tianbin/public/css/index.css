@@ -1,0 +1,37 @@
+*{margin:0;padding:0}
+ul,li{list-style:none;}
+a{text-decoration: none;}
+.showcase{height:782px;background-image: url(../images/3.jpg);background-size: cover;text-align:center;position:relative;font-size:0;}
+.showcase .arrow{position: absolute;font-size:0;}
+.showcase .l{left:18.75%;top:352px;}
+.showcase .r{right:18.75%;top:352px;}
+.helper{height:426px;background-image: url(../images/4.jpg);background-size: cover;}
+.helper .inner{position: relative;}
+.helper .text{position: absolute;left:630px;top:130px;}
+.helper .text .h{font-size:58px;font-weight:500;}
+.helper .text .p{font-size: 25px;font-weight:500;line-height:40px;}
+.helper .text .t{font-size: 14px;font-weight:bold;line-height:30px;}
+.helper .left,.helper .right{float:left;}
+.helper .white{float:right;}
+.helper .green{float:left;}
+.helper .left{margin-right:40px;}
+.helper button{width: 98px;height:29px;background:#168a42;color:#FFF;font-size:18px;position: absolute;left:210px;top:160px;}
+.main{height:888px;background:#d2d4d5;}
+.main .product{height:455px;position: relative;}
+.main .product .arr{position:absolute;font-size:0;}
+.main .product .l{left:0;top:200px;}
+.main .product .r{right:0;top:200px;}
+.main .item{width:334px;height:305px;margin-left:49px;float:left;position:relative;}
+.main .pic{width:334px;height:305px;}
+.main .pic img{position:absolute;right:0;bottom:0;}
+.main .item .detail{width:168px;height:32px;border:2px solid #868787;color:#868787;margin:28px auto;display:block;text-align:center;line-height:32px;letter-spacing: 2px;}
+.main .show{height:433px;}
+.main .show .pic{width:368px;height:347px;float:left;position: relative;}
+.main .show .pic:hover{box-shadow: 0 0 20px 10px rgba(215,215,215,0.8) inset;}
+.main .show .left{background-image: url(../images/8.jpg);background-position: -100px -50px;}
+.main .show .mid{background-image: url(../images/9.jpg);margin:0 48px;background-position: -80px 0;}
+.main .show .right{background-image: url(../images/10.jpg);background-position: -640px -220px;}
+.main .show .tag{width:236px;height:59px;background:#018234;border-bottom-left-radius: 26px;position:absolute;right:0;top:0;text-align: center;color:#fff;padding-top:10px;}
+.main .show span{font-size: 28px;font-family: "微软雅黑";line-height:33px;}
+.main .show p{font-size:14px;font-family: arial;line-height:16px;}
+	

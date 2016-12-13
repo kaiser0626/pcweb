@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/products.css" />
+    <script src="js/angular.js"></script>
+	<script src="js/angular-route.min.js"></script>
+    <script src="js/jquery-3.1.0.js"></script>
+   
+<script>
+        $(function(){ 
+        	//让第一个也就是山地车显示
+        	$('.main').eq(0).show().siblings('.main').hide()
+        	 $('.listb li').eq(0).addClass('bg')
+            //给uL,lI 绑上单击事件，切换颜色
+            $('.listb li').click(function(){
+                $('.listb li').removeClass()
+                $(this).addClass('bg')
+               
+                var w=$(this).index()
+                $('.main').eq(w).show().siblings('.main').hide()
+                
+            })
+
+
+
+        })
+    </script>
+	<script>
+        var myapp=angular.module('myapp',['ngRoute'])
+        myapp.controller('myctrl',function($scope){
+            $scope.bicycle=[
+                {name:'山地车',
+                 bicycleList:[
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock1',detail:[]},
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock2'},
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock2'},
+		            ]
+                },
+                {name:'折叠车',
+                 bicycleList:[
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock3'},
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock4'},
+		        ]
+
+                
+                },
+                {name:'公路车',
+                 bicycleList:[
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock22'},
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock33'},
+		        ]
+                },
+                {name:'旅行车',
+                 bicycleList:[
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock23'},
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock22'},
+		            ]
+                
+                },
+                {name:'城市车',
+                 bicycleList:[
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock11'},
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock22'},
+		            ]
+                
+                },
+                {name:'儿童车',
+                 bicycleList:[
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock12'},
+                	{imgUrl:'images/bicycle.jpg',"myName":'XDorock23'},
+		            ]
+                
+                
+                }
+            ]
+            //点击显示导航的名字
+            $scope.title=function(list){
+            	$scope.name=list.name
+            }
+
+        })
+
+    </script>
+	<script>
+	window.onload=function(){
+		var time=null;
+		$(".nav>li").find("ul").hide();
+		$(".nav>li").on("mouseenter",function(){
+			clearInterval(time);
+			$(".nav>li").find("ul").hide();
+			$(this).find("ul").fadeIn();
+		});
+		$(".nav>li").on("mouseleave",function(){
+			var _this=$(this);
+			clearInterval(time);
+			time=setInterval(function(){
+				_this.find("ul").fadeOut()
+			},200);
+		});
+		
+		
+		
+		
+		var time;
+		var ttime;
+		$('.bg').on('mouseenter',function(){
+			clearInterval(time)
+			clearInterval(ttime)
+			ttime=setInterval(function(){$('.contactForm').fadeIn()},200)
+
+
+		})
+		$('.bg').on('mouseleave',function(){
+			clearInterval(time)
+			clearInterval(ttime)
+			time=setInterval(function(){
+				$('.contactForm').fadeOut()
+			},2000)
+
+			$('.contactForm').on('mouseover',function(ev){
+
+				clearInterval(time)
+
+
+			})
+			$('.contactForm').on('click',function(ev){
+				ev=ev || window.event
+				ev.stopPropagation()
+			})
+			$(document).on('click',function(){
+				$('.contactForm').fadeOut()
+
+			})
+		})
+
+		
+		
+		for(i=0;i<2;i++){	
+			var arrow=document.getElementsByClassName("arrow")[i];
+			var arr=document.getElementsByClassName("arr")[i];
+		    arrow.onmousedown=function(){
+	    		this.style.background="#4ca36f";
+    		
+	    	};
+			arrow.onmouseup=function(){
+				this.style.background="";
+			};
+		    arr.onmousedown=function(){
+	    		this.style.background="#4ca36f";
+    		
+	    	};
+			arr.onmouseup=function(){
+				this.style.background="";
+			};
+		};
+	}	
+	</script>
+
+</head>
+
+<body ng-app="myapp" ng-controller="myctrl">
+	
+	<div class="header">
+		<div class="inner">
+			<div class="logo">
+				<img class="icon" src="images/logo.png" />
+				<img class="name" src="images/logo_name.png" />
+			</div>
+			<ul class="nav">
+				<li><a href="index.html">首页</a></li>
+				<li>
+					<a href="about.html">关于天宾</a>
+					<ul>
+						<li><a href="#">企业概况</a></li>
+						<li><a href="#">企业理念</a></li>
+						<li class="last"><a href="#">荣誉资质</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="detail.html">产品展示</a>
+					<ul>
+						<li><a href="#">山地自行车</a></li>
+						<li><a gref="#">折叠自行车</a></li>
+						<li><a href="#">公路自行车</a></li>
+						<li><a href="#">旅行自行车</a></li>
+						<li><a href="#">城市自行车</a></li>
+						<li class="last"><a href="#">儿童自行车</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="assistant.html">选车助手</a>
+					<ul>
+						<li class="last"><a href="#">条件筛选</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="Store.html">门店展示</a>
+					<ul>
+						<li class="last">
+							<a href="#">场景展示</a>
+						</li>
+					</ul>
+				</li>
+				<li class="last"><a href="contact.html">联系我们</a></li>
+			</ul>
+			<div class="searchBar">
+				<input type="search" id="search"/>
+				<input type="submit" id="submit" value=""/>
+			</div>
+			<span class="en">EN</span>
+			<span class="ch">中文</span>	
+			<div class='contactForm'>
+				<h1>给我们留言</h1>
+					<form>
+						<input type='text' placeholder="您的称呼（必填）" />
+						<input type='text' placeholder="您的电话（必填）" />
+						<input type='text' placeholder="您的邮箱" />
+						<input type='text' placeholder="所在公司" />
+						<textarea placeholder="请输入留言内容"></textarea>
+						<button type="submit">提交信息</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<div class="banner">
+</div>
+
+    <div class="listb">
+        <ul class="inner clear">
+            <li ng-repeat="list in bicycle" ng-click='title(list)'> {{list.name}}</li>
+        </ul>
+	</div> <!-- <div ng-view></div>-->
+<!--选项卡-->
+
+    <div class="main" ng-repeat='item in bicycle'>
+        <div class="inner  mainInner">
+        	<p class='mainTitle'> <a href="index.html" >首页</a> > 产品展示   > {{name || '山地车'}}</p>
+			<div class="bicycleList clear">
+				<a class="bicycle" ng-repeat='itemlist in item.bicycleList track by $index' href="detail.html?id=">
+					<img ng-src="{{itemlist.imgUrl}}">
+					<p>{{itemlist.myName}}</p>
+				</a>
+			</div>
+
+	    </div>
+    </div>
+	<div class="footer">
+			<div class="inner">
+				<ul class="list">
+					<li><a href="#">首页</a></li>
+					<li>
+						<ul >
+							<li>关于天宾</li>
+							<li>集团概括</li>
+							<li>企业理念</li>
+							<li>荣誉资质</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>产品展示</li>
+							<li>山地自行车</li>
+							<li>折叠自行车</li>
+							<li>公路自行车</li>
+							<li>旅行自行车</li>
+							<li>城市自行车</li>
+							<li>儿童自行车</li>							
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>选车助手</li>
+							<li>条件筛选</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>门店展示</li>
+							<li>场景展示</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>销售网络</li>
+							<li>电话</li>
+							<li>邮箱</li>
+							<li>QQ</li>
+						</ul>
+					</li>
+					<li class="last">
+						<ul>
+							<li>地址：河北省--市旦簺工业园</li>
+							<li>电话：+86-310-82222200</li>
+							<li>传真：-86-310-82222208</li>
+							<li>手机：-86-13315926789</li>
+							<li>网址：www.tian-bin.com</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="wechat">
+					<img src="images/12.jpg"/>
+					<p>wechat</p>
+				</div>
+			</div>
+		</div>
+</body>
+</html>

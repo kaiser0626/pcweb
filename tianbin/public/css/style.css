@@ -1,0 +1,78 @@
+*{margin:0;padding:0}
+ul,li{list-style:none;}
+a{text-decoration: none;}
+button{border:none;}
+.clearfix:after{content:200b;height:0;font-size:0;display:block;clear:both;}
+.white{color:white;}
+.green{color:green;}
+.black{color:black;}
+.header{width:100%;height:98px;background:rgba(21,136,65,0.8);position:absolute;left:0;top:50px;z-index: 2;}
+.inner{width:1200px;margin:0 auto;}
+.logo img{float:left;}
+.logo .icon{margin:28px 0 0 25px;}
+.logo .name{margin:30px 0 0 10px;}
+.nav{margin-left:50px;float:left;}
+.nav a{color:#fff}
+.nav li{width:110px;height:98px;text-align:center;font-size:21px;font-family:"微软雅黑";line-height:98px;color:#fff;float:left;}
+.nav>li:hover{background:#065f3c}
+.nav>li li{height:69px;background:#166948;line-height:69px;padding:0 20px;font-size:18px;border-right：1px solid #fff;border-bottom:1px solid #fff;border-color: #5d9780;} 
+.nav  .last{border-bottom:none;} 
+.contactForm{
+	height:530px;
+	width:600px;
+	background: rgba(138,188,153,0.5);
+	padding:40px;
+	position: absolute;
+	right:336px;
+	color: #fff;
+	z-index:3;
+	bottom:-610px;
+	display: none;
+}
+.contactForm h1{
+	height:60px;
+	line-height:60px
+}
+.contactForm input{
+	height:57px;
+	width:220px;
+	border: 1px solid #fff;
+	padding:0 10px;
+	margin:0 40px 20px 0;
+}
+.contactForm textarea{
+	background-color: transparent;
+	border: 1px solid #fff;
+	padding:10px;
+	width: 505px;
+	height:200px;
+	resize: none;	
+}	
+.contactForm button{
+	height:56px;
+	width:135px;
+	border: 1px solid #fff;
+	line-height: 56px;
+	background-color:transparent ;
+	color: #fff;
+	margin-top:20px
+}
+.searchBar{width:110px;height:22px;position: relative;left:960px;top:40px;}
+#search{width:110px;height:22px;border-radius: 4px;border:none;position: absolute;left:0;top:0;}
+#submit{border:0;width:22px;height:22px;background-color: #fff;background-image: url(../images/search.png);border-radius: 4px;position:absolute;right:0;top:0;}
+.header span{font-size:20px;font-family:"微软雅黑";line-height: 55px;color:#fff;float:right;margin-left:22px;}
+.banner{height:800px;background: url(../images/1.jpg);background-size: cover;}
+.banner .inner{position: relative;}
+.banner .text{position:absolute;left:210px;top:250px;}
+.banner .text span{font-size:75px;font-weight:bold;}
+.banner .text .en{font-size:18px;font-family:arial;line-height:30px;font-weight:500;}
+.banner .text .cn{font-size:32px;line-height:30px;}
+.banner .text h3{font-size:40px;line-height:40px;padding-top:20px;}
+.banner .text .en-L{font-size:20px;font-family:arial;font-weight:500;}
+.banner .text button{margin-top:20px;width:97px;height: 30px;background:#018234;color:#fff;font-size: 19px;}
+.footer{height:296px;background-image:url(../images/11.jpg);background-size: cover;}
+.footer .list{margin-left:76px;padding-top:83px;font-size:14px;font-family: "微软雅黑";line-height:23px;color:#fff;}
+.footer .list a{color:#fff;}
+.footer .list .last{width:200px;}
+.footer .list>li{width:102px;float:left;}
+.footer .wechat{margin-top:5px;font-size:14px;font-family: "微软雅黑";line-height:23px;color:#fff;text-align: center;}

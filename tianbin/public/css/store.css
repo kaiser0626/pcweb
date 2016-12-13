@@ -1,0 +1,119 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:"微软雅黑";
+    border:none;
+    list-style:none;
+    text-decoration: none;
+}
+.clear{
+    clear: both;
+}
+body{
+    background-color:#d1d3d5;
+}
+nav{
+    width:100%;
+    height:98px;
+    background-color:#198c47;
+    position: absolute;
+    top:50px;
+}
+.banner img{
+    display: block;
+    margin:0 auto;
+}
+
+.inner{
+    width:1200px;
+    margin:0 auto;
+    margin-bottom: 60px;
+}
+.subNav{
+    line-height:100px;
+}
+.subNav span{margin:0 20px;}
+.subNav li{
+    list-style: none;
+    float: left;
+}
+.subNav a{
+    font-size: 18px;
+    color:#198c47;
+}
+.wrap .title h2{
+    font-size: 36px;
+    font-weight: lighter;
+    text-align: center;
+}
+.wrap .title h3{
+    font-size: 25px;
+    font-weight: 500;
+    color:#9d9d9d;
+    text-transform: uppercase;
+    font-family:Arial;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.wrap{
+    width:100%;
+    margin-bottom: 60px;
+
+}
+.content .top{
+    width:100%;
+    height:126px;
+    overflow: hidden;
+    box-shadow:0 10px 30px #c9c9c9 inset;
+    background-color: #e7e7e7;
+    margin-bottom:80px;
+}
+.content .top .city{
+    width:1200px;
+    height:126px;
+    background: url("../images/store_locator.png") no-repeat 0 30px;
+
+}
+.content .city span{
+    font-size: 18px;
+    padding:0 84px 0 164px;
+
+}
+.content .city select{
+    font-size: 16px;
+    width: 150px;
+    height: 30px;
+    padding-left:10px;
+    margin:50px 50px 0 0;
+    border-radius:5px;
+    border:1px solid #018234;
+    background:none;
+}
+.content .box{
+    width:100%;
+    height:415px;
+    box-shadow:0 10px 30px #c9c9c9 inset;
+    background-color: #e7e7e7;
+}
+.content .box .left{
+    float: left;
+}
+.content .box .right{
+    padding:60px 0 0 784px;
+    text-align: center;
+}
+.content .box .en{
+    color:#7c7e7f;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding-top:20px;
+}
+.content .box .cn{
+    padding-top:30px;
+}
+.content .box2{
+    margin:80px 0 80px 0;
+}
+
+
+
